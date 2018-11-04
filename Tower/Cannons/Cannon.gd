@@ -22,13 +22,14 @@ func Fire():
 		return
 	get_node('Timer').start()
 	unpackedBullet = bullet.instance()
-	var distance_to_mouse = get_global_mouse_position().distance_to(self.global_position)
+	var distance_to_mouse = get_global_mouse_position().distance_to($bullet_spawn.global_position)
 	var power = (distance_to_mouse/max_length)*max_velocity
 	print(distance_to_mouse)
 	print(power)
 	
 	unpackedBullet.set_linear_velocity(Vector2(power, 0).rotated(tower.GetRotation()))
-	add_child(unpackedBullet)
+	unpackedBullet.position = $bullet_spawn.global_position
+	get_tree().root.add_child(unpackedBullet)
 	
 	
 

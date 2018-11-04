@@ -1,7 +1,15 @@
 [gd_scene load_steps=3 format=2]
 
-[ext_resource path="res://Bullet.gd" type="Script" id=1]
-[ext_resource path="res://assets/bullet.png" type="Texture" id=2]
+[ext_resource path="res://Tower/Cannons/Bullets/Bullet.gd" type="Script" id=1]
+[ext_resource path="res://Tower/Cannons/Bullets/Assets/bullet.png" type="Texture" id=2]
+
+
+
+
+
+
+
+
 
 [node name="Bullet" type="RigidBody2D" index="0"]
 

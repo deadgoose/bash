@@ -1,8 +1,8 @@
 [gd_scene load_steps=4 format=2]
 
-[ext_resource path="res://assets/cannon.png" type="Texture" id=1]
-[ext_resource path="res://Cannon.gd" type="Script" id=2]
-[ext_resource path="res://Bullet.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Tower/Cannons/Assets/cannon.png" type="Texture" id=1]
+[ext_resource path="res://Tower/Cannons/Cannon.gd" type="Script" id=2]
+[ext_resource path="res://Tower/Cannons/Bullets/Bullet.tscn" type="PackedScene" id=3]
 
 [node name="Cannon" type="Sprite"]
 
@@ -19,5 +19,9 @@ process_mode = 1
 wait_time = 0.5
 one_shot = true
 autostart = false
+
+[node name="bullet_spawn" type="Position2D" parent="." index="1"]
+
+position = Vector2( 0, -92.2686 )
 
 

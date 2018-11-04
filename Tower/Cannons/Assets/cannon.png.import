@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/cannon.png-d37649f5df114662f36ae2c69bb72fde.stex"
+path="res://.import/cannon.png-7af9c486bcd22c4eb1a977da29e75c05.stex"
 
 [deps]
 
-source_file="res://assets/cannon.png"
-dest_files=[ "res://.import/cannon.png-d37649f5df114662f36ae2c69bb72fde.stex" ]
+source_file="res://Tower/Cannons/Assets/cannon.png"
+dest_files=[ "res://.import/cannon.png-7af9c486bcd22c4eb1a977da29e75c05.stex" ]
 
 [params]
 

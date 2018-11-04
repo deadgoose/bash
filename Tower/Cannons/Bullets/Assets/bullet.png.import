@@ -2,12 +2,12 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/bullet.png-c68d06721d4ad8b0013707b0a51654af.stex"
+path="res://.import/bullet.png-7cccb0e6ba939243a0e7ba4dfae35573.stex"
 
 [deps]
 
-source_file="res://assets/bullet.png"
-dest_files=[ "res://.import/bullet.png-c68d06721d4ad8b0013707b0a51654af.stex" ]
+source_file="res://Tower/Cannons/Bullets/Assets/bullet.png"
+dest_files=[ "res://.import/bullet.png-7cccb0e6ba939243a0e7ba4dfae35573.stex" ]
 
 [params]
 
