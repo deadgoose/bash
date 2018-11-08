@@ -1,8 +1,10 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=7 format=2]
 
-[ext_resource path="res://Tower/KinematicBody2D.gd" type="Script" id=1]
-[ext_resource path="res://Tower/Cannons/Cannon.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Tower/Assets/tower.png" type="Texture" id=3]
+[ext_resource path="res://Tower/Tower.gd" type="Script" id=1]
+[ext_resource path="res://icon.png" type="Texture" id=2]
+[ext_resource path="res://Tower/KinematicBody2D.gd" type="Script" id=3]
+[ext_resource path="res://Tower/Cannons/Cannon.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Tower/Assets/tower.png" type="Texture" id=5]
 
 [sub_resource type="CircleShape2D" id=1]
 
@@ -11,28 +13,86 @@ radius = 60.0424
 
 [node name="Tower" type="Position2D" index="0"]
 
-position = Vector2( 93.3734, 526.944 )
+position = Vector2( 84.5837, 687.92 )
+script = ExtResource( 1 )
 _sections_unfolded = [ "Transform" ]
 
-[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="0"]
+[node name="TextureProgress" type="TextureProgress" parent="." index="0"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -19.0
+margin_top = 62.0
+margin_right = 45.0
+margin_bottom = 126.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 1
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 1
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+texture_under = null
+texture_over = null
+texture_progress = ExtResource( 2 )
+radial_fill_degrees = 360.0
+radial_center_offset = Vector2( 0, 0 )
+nine_patch_stretch = false
+_sections_unfolded = [ "Textures" ]
+
+[node name="KinematicBody2D" type="KinematicBody2D" parent="." index="1"]
 
 input_pickable = false
 collision_layer = 1
 collision_mask = 1
 collision/safe_margin = 0.08
-script = ExtResource( 1 )
+script = ExtResource( 3 )
 rotation_speed = 1.5
-Cannon = ExtResource( 2 )
+Cannon = ExtResource( 4 )
 
 [node name="Tower Base" type="Sprite" parent="KinematicBody2D" index="0"]
 
 scale = Vector2( 0.25, 0.25 )
-texture = ExtResource( 3 )
+texture = ExtResource( 5 )
 _sections_unfolded = [ "Transform" ]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KinematicBody2D" index="1"]
 
 shape = SubResource( 1 )
 _sections_unfolded = [ "Transform" ]
+
+[node name="ProgressBar" type="ProgressBar" parent="." index="2"]
+
+anchor_left = 0.0
+anchor_top = 0.0
+anchor_right = 0.0
+anchor_bottom = 0.0
+margin_left = -11.0
+margin_top = 77.0
+margin_right = 5.0
+margin_bottom = 93.0
+rect_pivot_offset = Vector2( 0, 0 )
+rect_clip_content = false
+mouse_filter = 0
+mouse_default_cursor_shape = 0
+size_flags_horizontal = 1
+size_flags_vertical = 0
+min_value = 0.0
+max_value = 100.0
+step = 1.0
+page = 0.0
+value = 0.0
+exp_edit = false
+rounded = false
+percent_visible = true
+_sections_unfolded = [ "Grow Direction" ]
 
 

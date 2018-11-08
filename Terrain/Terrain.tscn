@@ -1,0 +1,53 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Terrain/Terrain.gd" type="Script" id=1]
+
+[node name="Terrain" type="Line2D"]
+
+points = PoolVector2Array(  )
+width = 10.0
+default_color = Color( 0.00221252, 0.566406, 0.103591, 1 )
+texture_mode = -1547069856
+joint_mode = 2
+sharp_limit = 2.0
+round_precision = 8
+script = ExtResource( 1 )
+_sections_unfolded = [ "Capping" ]
+displacement = 130
+iterations = 5
+height = 400
+smooth = 1.1
+left_start = 50
+right_end = 0
+
+[node name="Polygon2D" type="Polygon2D" parent="." index="0"]
+
+polygon = PoolVector2Array(  )
+uv = PoolVector2Array(  )
+color = Color( 1, 1, 1, 1 )
+vertex_colors = PoolColorArray(  )
+offset = Vector2( 0, 0 )
+antialiased = false
+texture = null
+texture_offset = Vector2( 0, 0 )
+texture_scale = Vector2( 1, 1 )
+texture_rotation_degrees = 0.0
+invert_enable = false
+invert_border = 100.0
+
+[node name="Area2D" type="StaticBody2D" parent="." index="1"]
+
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+constant_linear_velocity = Vector2( 0, 0 )
+constant_angular_velocity = 0.0
+friction = 1.0
+bounce = 0.0
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Area2D" index="0"]
+
+build_mode = 1
+polygon = PoolVector2Array(  )
+
+

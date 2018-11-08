@@ -11,7 +11,7 @@ texture = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 bullet = ExtResource( 3 )
-max_velocity = 1500
+max_velocity = 3500
 
 [node name="Timer" type="Timer" parent="." index="0"]
 

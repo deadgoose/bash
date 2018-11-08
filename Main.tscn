@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+[ext_resource path="res://Tower/Tower.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=3]
+
+[node name="Main" type="Node"]
+
+script = ExtResource( 1 )
+
+[node name="Tower" parent="." index="0" instance=ExtResource( 2 )]
+
+position = Vector2( 61.4607, 428.593 )
+
+[node name="Terrain" parent="." index="1" instance=ExtResource( 3 )]
+
+
