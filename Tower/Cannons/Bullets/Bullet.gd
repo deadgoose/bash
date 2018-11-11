@@ -31,3 +31,7 @@ func hitSomething(body):
 	if body.is_in_group("Terrain"):
 		queue_free()
 		print("free")
+	elif body.is_in_group("Enemy"):
+		print("hit enemy")
+		queue_free()
+		body.hit()

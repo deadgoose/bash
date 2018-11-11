@@ -1,17 +1,26 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Main.gd" type="Script" id=1]
-[ext_resource path="res://Tower/Tower.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Enemies/BasicEnemy.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Tower/Tower.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Terrain/Terrain.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Enemies/EnemySpawner.tscn" type="PackedScene" id=5]
 
 [node name="Main" type="Node"]
 
 script = ExtResource( 1 )
+BasicEnemy = ExtResource( 2 )
 
-[node name="Tower" parent="." index="0" instance=ExtResource( 2 )]
+[node name="Tower" parent="." index="0" instance=ExtResource( 3 )]
 
 position = Vector2( 61.4607, 428.593 )
 
-[node name="Terrain" parent="." index="1" instance=ExtResource( 3 )]
+[node name="Terrain" parent="." index="1" instance=ExtResource( 4 )]
+
+[node name="EnemySpawner" parent="." index="2" instance=ExtResource( 5 )]
+
+position = Vector2( 1347.24, 394.179 )
+
+[connection signal="spawn" from="EnemySpawner" to="." method="_on_EnemySpawner_spawn"]
 
 

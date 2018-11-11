@@ -1,0 +1,35 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Enemies/BasicEnemy.gd" type="Script" id=1]
+[ext_resource path="res://Enemies/Assets/enemy.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+
+custom_solver_bias = 0.0
+extents = Vector2( 10.8768, 9.0437 )
+
+[node name="BasicEnemy" type="KinematicBody2D" groups=[
+"Enemy",
+]]
+
+position = Vector2( 545.654, 414.516 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+collision/safe_margin = 0.08
+script = ExtResource( 1 )
+_sections_unfolded = [ "Transform", "collision" ]
+velocity = 100
+
+[node name="Sprite" type="Sprite" parent="." index="0"]
+
+scale = Vector2( 0.25, 0.25 )
+texture = ExtResource( 2 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." index="1"]
+
+shape = SubResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+
