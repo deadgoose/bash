@@ -7,7 +7,7 @@ extends RigidBody2D
 func _ready():
 	# Called when the node is added to the scene for the first time.
 	# Initialization here
-	pass
+	connect("body_entered", self, "hitSomething")
 
  
 func _process(delta):
@@ -25,3 +25,9 @@ func _on_VisibilityNotifier2D_screen_exited():
 	else:
 		print("Position x:")
 		print(position.x)
+
+
+func hitSomething(body):
+	if body.is_in_group("Terrain"):
+		queue_free()
+		print("free")

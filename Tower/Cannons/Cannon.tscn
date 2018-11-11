@@ -6,12 +6,12 @@
 
 [node name="Cannon" type="Sprite"]
 
-scale = Vector2( 0.25, 0.25 )
+scale = Vector2( 0.05, 0.05 )
 texture = ExtResource( 1 )
 script = ExtResource( 2 )
 _sections_unfolded = [ "Transform" ]
 bullet = ExtResource( 3 )
-max_velocity = 3500
+max_velocity = 2200
 
 [node name="Timer" type="Timer" parent="." index="0"]
 

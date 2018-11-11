@@ -33,6 +33,23 @@ var current_displacement
 func _ready():
 	$Polygon2D.color = default_color
 	
+func flat_line():
+	print(height)
+	var screensize = get_viewport().get_visible_rect().size
+	if not right_end:
+		print("no right end")
+		right_end = screensize.x
+	var start = Vector2(0, height)
+	var end = Vector2(right_end, height)
+	points = PoolVector2Array()
+	add_point(start)
+	add_point(end)
+	var p = points
+	p.append(Vector2(right_end, screensize.y))
+	p.append(Vector2(0, screensize.y))
+	$Polygon2D.polygon = p
+	$Area2D/CollisionPolygon2D.polygon = p
+	
 func init_line():
 	current_displacement = displacement
 	var screensize = get_viewport().get_visible_rect().size
@@ -67,7 +84,3 @@ func add_points():
 		add_point(midpoint)
 	add_point(old_points[old_points.size() - 1])
 	current_displacement *= pow(2.0, -smooth)
-		
-func _input(event):
-	#if event is InputEventMouseButton and event.pressed:
-	#	init_line() 

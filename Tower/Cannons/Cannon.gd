@@ -4,7 +4,7 @@ extends Sprite
 # var a = 2
 # var b = "textvar"
 export (PackedScene) var bullet
-export (int) var max_velocity = 3500
+export (int) var max_velocity = 2200
 var tower
 
 var unpackedBullet
@@ -22,7 +22,7 @@ func Fire(mouse_distance):
 	get_node('Timer').start()
 	unpackedBullet = bullet.instance()
 	var power = mouse_distance*max_velocity
-	print(power)
+	#print(power)
 	
 	unpackedBullet.set_linear_velocity(Vector2(power, 0).rotated(tower.GetRotation()))
 	unpackedBullet.position = $bullet_spawn.global_position

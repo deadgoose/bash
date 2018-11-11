@@ -43,7 +43,7 @@ func _process(delta):
 		return
 	var distance_to_mouse = get_global_mouse_position().distance_to($Cannon.global_position)
 	mouse_distance = (distance_to_mouse/max_length)
-	print(mouse_distance)
+	#print(mouse_distance)
 	get_parent().get_node("ProgressBar").value = mouse_distance*100
 	get_parent().get_node("TextureProgress").value = mouse_distance*100
 		
